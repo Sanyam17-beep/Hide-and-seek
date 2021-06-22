@@ -6,17 +6,18 @@
 .container{
 
 margin-top: 30px;
+position:relative;
 }
 .box{
   float:right;
   height: 16vh;
   width: 16vh;
-  background-color:aquamarine;
+  background-color:rgb(74, 116, 255);
   border-radius: 60% 0 0 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  
 }
 .box2{
   float:right;
@@ -24,8 +25,25 @@ margin-top: 30px;
   width: 56vh;
   background-color:aquamarine;
   border-radius: 10% 0 0 10%;
-  z-index: -1;
-  animation: widthAnimate2 3s ease-in-out 1s infinite alternate; 
+  z-index: 1;
+ 
+   
+}
+.bottomDiv{
+  position:relative;
+  bottom:-7px;
+  left:150px;
+}
+.box-2{
+  visibility: hidden;
+}
+.animatebox{
+  transition: all 4s ease;
+  transform:translateX(17vh);
+}
+.animate{
+  animation: widthAnimate2 3s ease-in-out 1s alternate;
+
 }
 .l{
   border-radius: 50%;
@@ -38,18 +56,14 @@ margin-top: 30px;
   border: 1px solid black;
   
 }
-.box:hover{
-  transition: all 4s ease;
-  transform:translateX(17vh);
- 
-  
-}
+
+
 @keyframes widthAnimate2 {
   0%{
       width: 0;
   }
   100%{
-      width:56vh;
+      width:66vh;
      
   }
 }
